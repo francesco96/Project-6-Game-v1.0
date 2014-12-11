@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Francesco Galletti
+	Introduction to Programming
+	12 November, 2014
+	Project 4 - Game v0.6 -->
+	
+	  <head>
+      <!-- title of the web page -->
+      <title>
+         Fontana: The Illegible Scroll
+      </title>
+      <style>
+		body {text-align:center}
+		h5 {text-align:left}
+      </style>
+      <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+      <script type="text/javascript" src="game5.js"></script>
+   </head>
+   <body onload=init();>
+	   <h5>
+       Mailto:
+	   <address> <!--Looked up on 'StackOverFlow' to have an idea of how to use mailto -->
+	   Francesco (<a href="mailto:francesco.galletti1@marist.edu">- Marist Student Email -</a> || <a href="mailto:bogello@hotmail.com">- Personal Email -</a>)
+	   </address>
+	   </h5>
+	   Fontana: The Illegible Scroll [Texted-Based Game]
+	   <br><br>
+       
+       <!-- textarea -->
+       <textarea rows="12" cols="42" id="taMain"> </textarea>
+       <textarea rows="12" cols="33" id="taSecond">Fontana</textarea>
+	   
+	   <br>
+	   <br>
+	   
+	   <!-- command box where the player types commands -->
+	   Command:
+	   <input type="text" 
+              id = "txtCommand"
+              name="txtCommand"
+              placeholder="Type your action"
+              onkeypress="enter_KeyPress(event);">  
+                          
+       <input type="button"
+			  id="go"
+              value="Go" 
+              onclick="btnGo_click();" />        
+       <br>
+       
+       Track Movement for WASD       
+       <input type="text" 
+              id = "txtCommandTwo"
+              name="txtCommand"
+              placeholder="W,A,S,D [ R, X, Space ]"
+              onkeypress="txtCommand_keyPress(event)">
+
+       <br>
+	   <br>
+	   
+       <input type="button"
+              value="North"
+              id="North"
+              onclick="goNorth();" />
+              
+       <input type="button"
+              value="South"
+              id="South"
+              onclick="goSouth();" />
+              
+       <input type="button"
+              value="West"
+              id="West"
+              onclick="goWest();" />
+              
+       <input type="button"
+              value="East"
+              id="East"
+              onclick="goEast();" />
+       
+       <br>
+       <br>
+       
+       <input type="button"
+			  value="Tutorial"
+			  id="Tutorial"
+			  onclick="tutorial();" />
+			  
+       <input type="button"
+              value="Inventory"
+              id="inventory"
+              onclick="inventory();" />		
+       
+       <input type="button"
+              value="Search"
+              id="search"
+              onclick="search();" />	
+       
+       <input type="button"
+              value="Take"
+              id="take"
+              onclick="take();" />
+                            
+       <input type="button"
+              value="Yes"
+              id="yes"
+              onclick="Yes();"
+              disabled="true" />
+              
+       <input type="button"
+              value="No"
+              id="no"
+              onclick="No();"
+              disabled="true" />
+
+       <input type="button"
+              value="Scroll"
+              id="Scroll"
+              onclick="Scroll();"/>
+              
+       <input type="button"
+              value="Rune"
+              id="Rune"
+              onclick="Rune();"/>
+             
+              
+       <br>
+       <br>  
+       
+       <img id="map" src="map0.png" width="550" height="280"/>     
+    
+                   
+   </body>
+</html>
